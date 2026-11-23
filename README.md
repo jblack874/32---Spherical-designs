@@ -7,10 +7,10 @@ A spherical t-design is a finite set of points on the sphere on which every poly
 ## What it shows
 
 1. **Mathematical objective:** prove existence of antipodal spherical t-designs on S² with N points, for (t, N) = (15, 124), (19, 198), (21, 234).
-2. **Baseline:** AlphaEvolve's numerical designs (`designs.json`, from the AlphaEvolve repository of problems, Problem 32), with published residuals around 1e-7. No rigorous existence proof for these sizes was found.
+2. **Baseline:** the smallest rigorously proved designs at these t had (t+1)² points (Chen–Frommer–Lang interval method): 256 for t = 15, 400 for t = 19, 484 for t = 21. AlphaEvolve's numerical designs (`designs.json`, Problem 32) have far fewer points but were not proved (published residuals around 1e-7).
 3. **Candidate result:** for each (t, N), an exact antipodal t-design with N points exists inside a box of radius 2⁻⁴⁰ (checker 1) and 2⁻⁶⁰ (checker 2) around the refined point.
 4. **Verification:** two independent Krawczyk interval proofs per design (python-flint arb at 320 bits with stereographic coordinates; mpmath intervals with spherical angles and a different monomial basis). All six pass. No Lean proof.
-5. **Record eligibility:** existence results, not numeric records; they upper-bound the minimal size of an antipodal t-design on S² at these t by a proved configuration.
+5. **Record eligibility:** existence results: proved design sizes drop from 256 → 124 (t = 15), 400 → 198 (t = 19), 484 → 234 (t = 21).
 6. **Novelty:** new rigorous existence results for these (t, N), as far as the search on 23 Nov 2026 found. The numerical configurations are AlphaEvolve's.
 7. **Search economics:** each proof runs in seconds (checker 1) to under a minute (checker 2).
 8. **Decision:** shipped.
