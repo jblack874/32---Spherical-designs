@@ -1,0 +1,7 @@
+spherical_design_221234: t=21 N=234 E=230 P=234; float max|F| 3.6e-15; fixed [51, 127, 171, 191]; cond 1.1e+10
+  mp Newton 0: max|F| = 4.55e-15 (1s)
+  mp Newton 1: max|F| = 3.81e-18 (19s)
+  mp Newton 2: max|F| = 1.52e-33 (37s)
+  mp Newton 3: max|F| = 7.97e-59 (55s)
+  interval Jacobian over the box done (58s)
+  Krawczyk (iv): box radius 2^-60, max |K-m|/r <= [0.000005756079924435886013921459851877140816655426800352137466027770571, 0.000005756079924435886013921459851877140816655426800352137466027770571] -> PROVED (100s)

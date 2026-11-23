@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "claim_id": "spherical-designs-S2-t15-N124-t19-N198-t21-N234",
+  "repository": {
+    "commit": "recorded in git history of this commit",
+    "dirty": false
+  },
+  "command": "python3 krawczyk_design.py designs.json NAME T && python3 check2_iv.py designs.json NAME T  (NAME,T in {spherical_design_215124,15; spherical_design_219198,19; spherical_design_221234,21})",
+  "environment": {
+    "software": [
+      "Python 3.13.18",
+      "python-flint 0.9.0 (arb)",
+      "mpmath 1.4.1",
+      "numpy 2.5.3"
+    ],
+    "hardware": "2-core Intel Xeon @ 2.30GHz, Linux"
+  },
+  "mathematics": {
+    "assertion_tested": "For each named design, the square antipodal design system (E moment equations in the N/2 representatives, N-E coordinates fixed at dyadic values) has a unique solution in a box of radius 2^-40 (checker 1) and 2^-60 (checker 2) around the refined point, hence an exact antipodal spherical t-design with N points exists.",
+    "coefficient_domain": "real numbers; arb ball arithmetic (320 bits) and mpmath.iv interval arithmetic",
+    "conventions": "antipodal pairs; checker 1 stereographic coordinates, checker 2 spherical angles with x^2-reduced monomial basis",
+    "inputs": [
+      {
+        "path": "designs.json",
+        "sha256": "f705f7baaa92b10e4b43d513ecf085473e91c4f5937475f319590fccc0fcd6be",
+        "description": "AlphaEvolve's numerical designs, Problem 32"
+      }
+    ],
+    "bounds": {
+      "215124": "checker1 2.1e-4, checker2 4.5e-9",
+      "219198": "checker1 2.6e-3, checker2 9.1e-7",
+      "221234": "checker1 3.8e-2, checker2 5.8e-6"
+    },
+    "non_claims": [
+      "No minimality claim.",
+      "Womersley's smaller numerical designs are not proved here.",
+      "No Lean formalization."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-23T22:40:00Z",
+    "runtime_seconds": 16.9,
+    "exit_status": 0
+  },
+  "outputs": [
+    {
+      "path": "results/rerun_k124.out",
+      "sha256": "2f665e3b4a9246e213930bbb5ef28210d8bc015b8b02e022c2d9c5e88e574846"
+    },
+    {
+      "path": "results/rerun_c124.out",
+      "sha256": "bcc7b747d7d50e146077f7f6da828257b3fb95dce4d430952ec393ca93d7cc83"
+    },
+    {
+      "path": "proof_spherical_design_215124.json",
+      "sha256": "beddec4c92529ac3b9473d38e4dba9f183a8ba4fabcfe2aad137ae9b884453bd"
+    },
+    {
+      "path": "proof_spherical_design_219198.json",
+      "sha256": "195797a797db6458bb2c2c892ca169f6b5e5d14844697025e2d6f5ccd0abfc27"
+    },
+    {
+      "path": "proof_spherical_design_221234.json",
+      "sha256": "cc2c433ed810ba2cec5604f5fe0c1bc4119828a52017c7d4d0d9aa3749738a45"
+    },
+    {
+      "path": "results/k198.out",
+      "sha256": "3fed4efd5ba3e6815c4988bc17840f24f2a7f58e7cae86eb25dff63f69e2d13b"
+    },
+    {
+      "path": "results/k234.out",
+      "sha256": "5dc203c9f99e5c7152b2864a69be7e4705a03e6195b610687ad7627e290555a8"
+    },
+    {
+      "path": "results/c198.out",
+      "sha256": "4fae51431cc3611e673a8cda243d2f896499e4ebe090072d9dec6f8ae25802b9"
+    },
+    {
+      "path": "results/c234.out",
+      "sha256": "2556554411246b8469d45fe92cb78df4f51b08ee8f1ed26f8549eccabc8d517f"
+    }
+  ],
+  "checks": [
+    {
+      "name": "checker 1 (arb Krawczyk) on all three designs",
+      "passed": true
+    },
+    {
+      "name": "checker 2 (mpmath.iv Krawczyk, separate code) on all three designs",
+      "passed": true
+    }
+  ],
+  "result": "verified: finite assertion established by two independent interval checkers",
+  "residual_risks": [
+    "Checkers share the problem definition and input configuration.",
+    "Library interval correctness is trusted.",
+    "Not peer reviewed."
+  ]
+}

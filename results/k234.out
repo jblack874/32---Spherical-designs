@@ -1,0 +1,12 @@
+spherical_design_221234: t=21 N=234 pairs=117 params=234 equations=230 (spare 4)
+  published max|F| = 1.38e-06
+  float refine: max|F| = 1.42e-14, moved 3.1e-06
+  square block: sigma_min 8.38e-09, cond 6.93e+09; fixed params [np.int32(74), np.int32(99), np.int32(172), np.int32(187)]
+  arb Newton 0: max|F| = 1.877e-14  (0s)
+  arb Newton 1: max|F| = 3.183e-17  (1s)
+  arb Newton 2: max|F| = 2.751e-32  (2s)
+  arb Newton 3: max|F| = 1.422e-61  (2s)
+  arb Newton 4: max|F| = 1.798e-94  (3s)
+  Krawczyk: box radius 2^-40, max |K-m|/r = 3.754e-02, ||I - Y F'(X)||_inf <= 3.754e-02
+  min pairwise distance of the 234 points ~ 1.846e-01 (box radius 2^-40 on parameters)
+  RESULT spherical_design_221234: PROVED (4s)
